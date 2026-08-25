@@ -2,7 +2,7 @@
 
 Portfólio pessoal de um desenvolvedor Full Stack, construído com HTML semântico, Tailwind CSS e JavaScript vanilla. Os projetos são puxados em tempo real via API do GitHub.
 
-**Acesse:** [afkjuandev.github.io/portfolio](https://afkjuandev.github.io/portfolio)
+**Acesse:** [https://portfolio.afkjuan.workers.dev](https://portfolio.afkjuan.workers.dev)
 
 ---
 
