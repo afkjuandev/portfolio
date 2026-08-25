@@ -3,10 +3,292 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juan - portfolio</title>
-    <link rel="stylesheet" href="input.css">
+    <meta name="description" content="Portfólio de Juan Silva — Desenvolvedor Full Stack">
+    <title>Portfolio Juan Silva | afkjuandev</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body>
-    
+<body class="min-h-screen bg-white text-slate-800 antialiased">
+
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+
+            <a href="#home" class="flex items-center gap-3 shrink-0" aria-label="Juan Silva - Início">
+                <span class="relative flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14" aria-hidden="true">
+                    <span class="absolute inset-0 border-l-2 border-blue-600"></span>
+                    <span class="absolute top-0 left-0 w-full border-t-2 border-blue-600"></span>
+                    <span class="absolute bottom-0 left-0 w-full border-b-2 border-blue-600"></span>
+                    <span class="text-2xl sm:text-3xl font-bold tracking-[-0.15em]">
+                        <span class="text-slate-800">J</span><span class="text-blue-600">S</span>
+                    </span>
+                </span>
+                <span class="hidden sm:block text-xl sm:text-2xl font-bold tracking-tight text-slate-800">
+                    Juan <span class="font-light text-slate-600">Silva</span>
+                </span>
+            </a>
+
+            <nav class="hidden md:block" aria-label="Menu principal">
+                <ul class="flex items-center gap-8 text-sm text-slate-600">
+                    <li>
+                        <a href="#home" class="relative py-1 hover:text-blue-600 transition-colors
+                            after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0
+                            after:bg-blue-600 after:transition-all after:duration-300
+                            hover:after:w-full">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#sobre" class="relative py-1 hover:text-blue-600 transition-colors
+                            after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0
+                            after:bg-blue-600 after:transition-all after:duration-300
+                            hover:after:w-full">
+                            Sobre
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#projetos" class="relative py-1 hover:text-blue-600 transition-colors
+                            after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0
+                            after:bg-blue-600 after:transition-all after:duration-300
+                            hover:after:w-full">
+                            Projetos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#tecnologias" class="relative py-1 hover:text-blue-600 transition-colors
+                            after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0
+                            after:bg-blue-600 after:transition-all after:duration-300
+                            hover:after:w-full">
+                            Tecnologias
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contato" class="relative py-1 hover:text-blue-600 transition-colors
+                            after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0
+                            after:bg-blue-600 after:transition-all after:duration-300
+                            hover:after:w-full">
+                            Contato
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-2">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                    class="rounded-md px-3 py-2 text-sm font-medium text-[#0A66C2] hover:bg-[#0A66C2]/10 transition">
+                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                    <span class="sr-only">LinkedIn</span>
+                </a>
+                <a href="https://github.com/afkjuandev" target="_blank" rel="noopener noreferrer"
+                    class="rounded-md px-3 py-2 text-sm font-medium text-white bg-slate-800 hover:bg-slate-700 transition">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    <span class="sr-only">GitHub</span>
+                </a>
+            </div>
+
+            <button id="menu-toggle" class="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 rounded-md hover:bg-slate-100 transition"
+                aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="block h-0.5 w-6 bg-slate-700 transition-transform duration-300 origin-center"></span>
+                <span class="block h-0.5 w-6 bg-slate-700 transition-opacity duration-300"></span>
+                <span class="block h-0.5 w-6 bg-slate-700 transition-transform duration-300 origin-center"></span>
+            </button>
+
+        </div>
+
+        <nav id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white" aria-label="Menu mobile">
+            <ul class="flex flex-col px-4 py-4 gap-1 text-sm text-slate-600">
+                <li><a href="#home" class="block rounded-lg px-4 py-3 hover:bg-slate-50 hover:text-blue-600 transition">Home</a></li>
+                <li><a href="#sobre" class="block rounded-lg px-4 py-3 hover:bg-slate-50 hover:text-blue-600 transition">Sobre</a></li>
+                <li><a href="#projetos" class="block rounded-lg px-4 py-3 hover:bg-slate-50 hover:text-blue-600 transition">Projetos</a></li>
+                <li><a href="#tecnologias" class="block rounded-lg px-4 py-3 hover:bg-slate-50 hover:text-blue-600 transition">Tecnologias</a></li>
+                <li><a href="#contato" class="block rounded-lg px-4 py-3 hover:bg-slate-50 hover:text-blue-600 transition">Contato</a></li>
+            </ul>
+            <div class="flex items-center gap-2 px-4 pb-4">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                    class="flex-1 flex items-center justify-center gap-2 rounded-md px-3 py-2.5 text-sm font-medium text-[#0A66C2] border border-[#0A66C2]/20 hover:bg-[#0A66C2]/10 transition">
+                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/afkjuandev" target="_blank" rel="noopener noreferrer"
+                    class="flex-1 flex items-center justify-center gap-2 rounded-md px-3 py-2.5 text-sm font-medium text-white bg-slate-800 hover:bg-slate-700 transition">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    GitHub
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="home">
+
+        <section class="w-full min-h-[85vh] flex items-center bg-gradient-to-b from-sky-400 to-blue-900">
+            <div class="max-w-7xl mx-auto w-full flex flex-col items-center text-center px-4 py-20 sm:px-6 lg:px-8">
+
+                <span class="mb-6 inline-flex items-center gap-2 rounded-full
+                    bg-white/10 border border-white/20
+                    px-4 py-2 text-xs sm:text-sm font-medium text-blue-100 backdrop-blur-sm">
+                    <span class="relative flex h-2 w-2 shrink-0" aria-hidden="true">
+                        <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-75"></span>
+                        <span class="relative inline-flex h-2 w-2 rounded-full bg-blue-600"></span>
+                    </span>
+                    Desenvolvedor Full Stack
+                </span>
+
+                <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-white md:text-6xl">
+                    Olá, eu sou
+                    <span class="text-sky-400">Juan Silva</span>
+                </h1>
+
+                <p class="mt-5 max-w-2xl text-base sm:text-lg leading-7 sm:leading-8 text-blue-100 px-2">
+                    Desenvolvedor apaixonado por criar aplicações modernas,
+                    eficientes e experiências digitais incríveis.
+                </p>
+
+                <div class="mt-8 flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
+                    <a href="#projetos"
+                        class="w-full sm:w-auto text-center rounded-md bg-sky-500 px-6 py-3 text-sm font-semibold text-white
+                        hover:bg-sky-400 transition">
+                        Ver Projetos
+                        <i class="fa-solid fa-arrow-right ml-1" aria-hidden="true"></i>
+                    </a>
+                    <a href="#sobre"
+                        class="w-full sm:w-auto text-center rounded-md border border-white/30 bg-white/10 px-6 py-3
+                        text-sm font-semibold text-white backdrop-blur-sm
+                        hover:bg-white/20 transition">
+                        Sobre Mim
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="sobre" class="w-full bg-white py-16 sm:py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12 sm:mb-14">
+                    <span class="inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-1.5 text-xs font-semibold text-slate-600 uppercase tracking-wider">
+                        <i class="fa-solid fa-user" aria-hidden="true"></i>
+                        Sobre Mim
+                    </span>
+                    <h2 class="mt-4 text-3xl sm:text-4xl font-bold tracking-tight text-slate-800 md:text-5xl">
+                        Quem é Juan Silva?
+                    </h2>
+                    <p class="mt-3 text-base sm:text-lg text-slate-500 max-w-xl mx-auto">
+                        Um pouco sobre mim e minha jornada.
+                    </p>
+                </div>
+                <div class="max-w-3xl mx-auto text-slate-600 text-base sm:text-lg leading-7 sm:leading-8 space-y-4">
+                    <p>
+                        Sou um desenvolvedor Full Stack com foco em tecnologias modernas como React, Next.js, Node.js e banco de dados relacionais.
+                        Gosto de transformar ideias em soluções digitais eficientes e com ótima experiência do usuário.
+                    </p>
+                    <p>
+                        Estou sempre buscando aprender novas ferramentas e boas práticas para entregar projetos de alta qualidade.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="w-full bg-slate-50 py-16 sm:py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="text-center mb-12 sm:mb-14">
+                    <span class="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-1.5 text-xs font-semibold text-blue-700 uppercase tracking-wider">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        GitHub
+                    </span>
+                    <h2 class="mt-4 text-3xl sm:text-4xl font-bold tracking-tight text-slate-800 md:text-5xl">
+                        Meus Projetos
+                    </h2>
+                    <p class="mt-3 text-base sm:text-lg text-slate-500 max-w-xl mx-auto">
+                        Projetos reais puxados em tempo real do meu GitHub.
+                    </p>
+                </div>
+
+                <div id="github-projects" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                    <div class="col-span-full flex justify-center py-12" role="status" aria-label="Carregando projetos">
+                        <div class="h-8 w-8 animate-spin rounded-full border-4 border-blue-600 border-t-transparent"></div>
+                        <span class="sr-only">Carregando...</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="tecnologias" class="w-full bg-white py-16 sm:py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="text-center mb-12 sm:mb-14">
+                    <span class="inline-flex items-center gap-2 rounded-full bg-sky-100 px-4 py-1.5 text-xs font-semibold text-sky-700 uppercase tracking-wider">
+                        <i class="fa-solid fa-code" aria-hidden="true"></i>
+                        Skills
+                    </span>
+                    <h2 class="mt-4 text-3xl sm:text-4xl font-bold tracking-tight text-slate-800 md:text-5xl">
+                        Minhas Tecnologias
+                    </h2>
+                    <p class="mt-3 text-base sm:text-lg text-slate-500 max-w-xl mx-auto">
+                        Ferramentas e linguagens que uso no dia a dia.
+                    </p>
+                </div>
+
+                <div id="tech-grid" class="flex flex-col gap-8 sm:gap-10"></div>
+
+            </div>
+        </section>
+
+        <section id="contato" class="w-full bg-slate-50 py-16 sm:py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+                <span class="inline-flex items-center gap-2 rounded-full bg-blue-100 px-4 py-1.5 text-xs font-semibold text-blue-700 uppercase tracking-wider">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                    Contato
+                </span>
+                <h2 class="mt-4 text-3xl sm:text-4xl font-bold tracking-tight text-slate-800 md:text-5xl">
+                    Vamos Conversar?
+                </h2>
+                <p class="mt-3 text-base sm:text-lg text-slate-500 max-w-xl mx-auto mb-10">
+                    Estou disponível para oportunidades e collabs.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="mailto:seu@email.com"
+                        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white hover:bg-blue-500 transition">
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        Enviar E-mail
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-md border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-100 transition">
+                        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/afkjuandev" target="_blank" rel="noopener noreferrer"
+                        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-md border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 hover:bg-slate-100 transition">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        GitHub
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="w-full bg-slate-900 text-slate-400 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
+            <p>&copy; 2026 Juan Silva. Todos os direitos reservados.</p>
+            <div class="flex items-center gap-4">
+                <a href="https://github.com/afkjuandev" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-white transition" aria-label="GitHub">
+                    <i class="fa-brands fa-github text-lg" aria-hidden="true"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
+                    class="hover:text-white transition" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin text-lg" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>
